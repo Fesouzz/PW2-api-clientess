@@ -1,5 +1,9 @@
 const express = require("express");
 const clienteRoutes = require("./Routes/clienteRoutes");
+const path = require("path");
+const prisma = require("./config/prisma");
+const { prismaCliente } = require("@prisma/client")
+require("doteenv").config({ path: path.resolve(__dirname, ".env")});
 
 const app = express();
 const PORT = process.env.PORT || 3000;

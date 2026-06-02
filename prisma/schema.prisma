@@ -1,0 +1,17 @@
+generator cliente {
+    provider = "prisma-client-ja
+}
+
+datasource db {
+    provider = "mysql"
+    url = env("DB_CONNECTION")
+}
+
+model Cliente{
+    id Int @id @default(autoincrement())
+    nome String
+    telefone String?
+    endereco String?
+
+    @@map("clientes0")
+}
