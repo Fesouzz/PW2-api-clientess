@@ -36,3 +36,9 @@ app.listen(PORT, () => {
 })
 
 module.exports = app;
+
+process.on("SIGINT", async () => {
+    await prisma.$disconnect();
+    console.log("Conexão com o banco encerrada.");
+    process.exit(0);
+});

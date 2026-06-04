@@ -1,5 +1,5 @@
 generator cliente {
-    provider = "prisma-client-ja
+    provider = "prisma-client-js"
 }
 
 datasource db {
@@ -13,5 +13,5 @@ model Cliente{
     telefone String?
     endereco String?
 
-    @@map("clientes0")
+    @@map("tbCliente")
 }
