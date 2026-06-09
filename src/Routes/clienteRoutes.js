@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const clienteController = require("../controllers/ClienteeController");
+const clienteController = require("../controller/ClienteController");
 
 router.get("/", clienteController.ListarClientes);
 router.get("/:id", clienteController.BuscarClientePorId);
